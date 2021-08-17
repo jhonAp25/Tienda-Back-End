@@ -26,14 +26,14 @@ public class SwaggerConfig {
 
     private ApiInfo info(){
         return new ApiInfo(
-                "API MATRICULA",
+                "Api Tienda 2.0",
                 "",
                 "1.0",
                 "https://www.apache.org/licenses/LICENSE-2.0.html",
                 new Contact(
+                        "jhon Apaza Larico ",
                         "",
-                        "",
-                        ""),
+                        "apazalaricojhon25@gmail.com"),
                 "Apache 2.0",
                 "https://www.apache.org/licenses/LICENSE-2.0.html",
                 Collections.emptyList()

@@ -1,6 +1,6 @@
 package com.apaza.Tienda20.security.dto;
 
-import lombok.Data;
+
 import lombok.Getter;
 import lombok.Setter;
 

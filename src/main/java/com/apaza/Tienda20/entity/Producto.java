@@ -37,7 +37,7 @@ public class Producto {
     private Color color;
 
     @ManyToOne
-    private DetalleProducto detalleProducto;
+    private TipoProducto tipoProducto;
 
 
 

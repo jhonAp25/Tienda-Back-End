@@ -15,5 +15,10 @@ public class TipoProducto {
     private String nombre;
 
 
+    @OneToMany
+    private List<Modelo> modelo;
+
+
+
 
 }

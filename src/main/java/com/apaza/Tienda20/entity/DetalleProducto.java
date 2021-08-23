@@ -12,11 +12,6 @@ public class DetalleProducto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    private TipoProducto tipoProducto;
-
-    @ManyToOne
-    private Modelo modelo;
 
 
 

@@ -3,10 +3,7 @@ package com.apaza.Tienda20.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -21,5 +18,9 @@ public class Gastos {
     private double costo;
     private LocalDate fecha;
 
+    @PrePersist
+    void Prepersit() {
+        fecha = LocalDate.now();
+    }
 
 }

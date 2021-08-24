@@ -16,7 +16,7 @@ public class Gastos {
 
     private String nombre;
     private double costo;
-    private String hola;
+
     private LocalDate fecha;
 
     @PrePersist

@@ -35,18 +35,6 @@ public class ProductoController {
         return new ResponseEntity<>(productoServices.Listado(), HttpStatus.OK);
     }
 
-//    @GetMapping("/listaXFecha")
-//    public ResponseEntity<?> listarFecha(){
-//        Date ahora = new Date();
-//        SimpleDateFormat formateador = new SimpleDateFormat("yyyy-mm-dd");
-//
-//        Collection<Producto> itemsProducto= productoServices.ListadoFecha(ahora);
-//        Collection<ProductoDTO> itemsProductoDTO = ProductoMapper.convert(itemsProducto);
-//
-//        return new ResponseEntity<>(itemsProductoDTO, HttpStatus.OK);
-//    }
-
-
     @GetMapping("/estadistica")
     public ResponseEntity<?>listarEstadistica(){
         Collection<Producto> itemsProducto = productoServices.Listado();
@@ -69,10 +57,10 @@ public class ProductoController {
     }
 
 
-//    @PutMapping("/actualizar/{id}")
-//    public Producto actualizarProd (@RequestBody Producto prod){
-//        return   productoServices.Actulaizar(prod);
-//    }
+    @GetMapping("/ListaModelo/{id}")
+    public List<Producto> ListaPorModelo (@PathVariable Long id){
+        return   productoServices.FiltroModelo(id);
+    }
 
 //
 //    @PreAuthorize("hasRole('ADMIN')")

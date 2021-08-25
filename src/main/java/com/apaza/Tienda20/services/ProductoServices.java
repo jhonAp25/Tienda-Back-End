@@ -36,6 +36,15 @@ public class ProductoServices {
          return producto;
 
     }
+
+        public List<Producto> FiltroModelo(Long id){
+        return  productoRepository.findAllByModeloId(id);
+    }
+
+
+
+
+
 //    public Producto Guardar(Producto prod){
 //        Producto newProd = new Producto();
 //        if (prod.getColor().isEmpty() )  throw new BadRequestException("Complete el campo color"  );
@@ -69,9 +78,6 @@ public class ProductoServices {
 //        return productoRepository.save(newProd);
 //    }
 
-//    public List<Producto> FiltroTipoV(Long p){
-//        return  productoRepository.findByTipoProductoId(p);
-//    }
 
 
 

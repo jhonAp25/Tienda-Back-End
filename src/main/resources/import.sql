@@ -63,4 +63,9 @@ insert into gastos values (null, 50.5 , '2021-08-20' , 'elastico' );
 
 
 insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 1, 1, 1 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 2, 1, 1 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 3, 1, 1 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 2, 1, 2 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 2, 1, 2 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 1, 1, 3 , 1) ;
 

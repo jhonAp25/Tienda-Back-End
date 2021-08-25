@@ -3,8 +3,7 @@ package com.apaza.Tienda20.entity;
         import lombok.Data;
 
         import javax.persistence.*;
-        import java.util.Date;
-        import java.util.List;
+        import java.time.LocalDate;
 
 
 @Entity
@@ -14,16 +13,17 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     @PrePersist
     void Prepersist(){
-        fechaIngreso = new Date();
+        fechaIngreso = LocalDate.now();
     }
 
-    @Temporal(TemporalType.DATE)
-    private Date fechaIngreso;
+    private LocalDate fechaIngreso;
 
     private double precioMax;
     private double precioMin;
+    private int stock;
     private boolean estado;
 
 
@@ -37,7 +37,7 @@ public class Producto {
     private Color color;
 
     @ManyToOne
-    private TipoProducto tipoProducto;
+    private Modelo modelo;
 
 
 

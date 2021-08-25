@@ -18,8 +18,6 @@ public class Modelo {
     private String imagenProducto;
 
 
-    @ManyToOne
-    private TipoProducto tipoProducto;
 
 
 

@@ -37,10 +37,21 @@ public class ProductoServices {
 
     }
 
-        public List<Producto> FiltroModelo(Long id){
+    public List<Producto> FiltroModelo(Long id){
         return  productoRepository.findAllByModeloId(id);
     }
 
+    public List<Producto> filtroModeloColorTalla(Long idMod, Long idTal, Long idCol){
+        return  productoRepository.findAllByModeloIdAndTallaIdAndColorId(idMod, idTal,idCol);
+    }
+
+    public List<Producto> filtroModeloColor(Long idMod, Long idCol){
+        return  productoRepository.findAllByModeloIdAndColorId(idMod,idCol);
+    }
+
+    public List<Producto> filtroModeloTalla(Long idMod, Long idTal){
+        return  productoRepository.findAllByModeloIdAndTallaId(idMod,idTal);
+    }
 
 
 

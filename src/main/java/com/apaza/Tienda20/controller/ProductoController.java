@@ -56,10 +56,25 @@ public class ProductoController {
 
     }
 
-
     @GetMapping("/ListaModelo/{id}")
     public List<Producto> ListaPorModelo (@PathVariable Long id){
         return   productoServices.FiltroModelo(id);
+    }
+
+    @GetMapping("/ModeloCustom")
+    public List<Producto> ListaCustom (@RequestParam Long idMol ,@RequestParam Long idTal,@RequestParam Long idCol ){
+        return   productoServices.filtroModeloColorTalla(idMol, idTal, idCol);
+    }
+
+    @GetMapping("/ModeloColor")
+    public List<Producto> ListaColorModelo(@RequestParam Long idMol ,@RequestParam Long idCol ){
+        return   productoServices.filtroModeloColor(idMol,  idCol);
+    }
+
+
+    @GetMapping("/ModeloTalla")
+    public List<Producto> ListaTallaModelo(@RequestParam Long idMol ,@RequestParam Long idTal ){
+        return   productoServices.filtroModeloTalla(idMol,  idTal);
     }
 
 //

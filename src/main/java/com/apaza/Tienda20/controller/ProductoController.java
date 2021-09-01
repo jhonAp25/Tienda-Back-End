@@ -35,18 +35,12 @@ public class ProductoController {
         return new ResponseEntity<>(productoServices.Listado(), HttpStatus.OK);
     }
 
-    @GetMapping("/estadistica")
-    public ResponseEntity<?>listarEstadistica(){
-        Collection<Producto> itemsProducto = productoServices.Listado();
-        Collection<EstadisticaDTO> itemsEstadisticaDTO = EstadisticaMapper.convert(itemsProducto);
-
-        return new ResponseEntity<>(itemsEstadisticaDTO,HttpStatus.OK);
-    }
-
-//    @PreAuthorize("hasRole('ADMIN')")
-//    @PostMapping("/guardar")
-//    public Producto guardar(@RequestBody Producto prod){
-//        return productoServices.Guardar(prod);
+//    @GetMapping("/estadistica")
+//    public ResponseEntity<?>listarEstadistica(){
+//        Collection<Producto> itemsProducto = productoServices.Listado();
+//        Collection<EstadisticaDTO> itemsEstadisticaDTO = EstadisticaMapper.convert(itemsProducto);
+//
+//        return new ResponseEntity<>(itemsEstadisticaDTO,HttpStatus.OK);
 //    }
 
 
@@ -77,11 +71,21 @@ public class ProductoController {
         return   productoServices.filtroModeloTalla(idMol,  idTal);
     }
 
-//
+
+    //    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping()
+    public Producto guardar(@RequestBody Producto prod){
+        return productoServices.Guardar(prod);
+    }
+
+
+
+
+    //
 //    @PreAuthorize("hasRole('ADMIN')")
-//        @GetMapping("/ventaTipo/{tipo}")
-//    public List<Producto> ventaTipo (@PathVariable Long tipo){
-//        return productoServices.FiltroTipoV(tipo);
-//    }
+    @PostMapping("/update")
+    public Producto updateProdudto (Integer stock , Long id){
+        return productoServices.Actualizar(stock, id);
+    }
 
 }

@@ -56,38 +56,21 @@ public class ProductoServices {
 
 
 
-//    public Producto Guardar(Producto prod){
-//        Producto newProd = new Producto();
-//        if (prod.getColor().isEmpty() )  throw new BadRequestException("Complete el campo color"  );
-//        newProd.setColor(prod.getColor());
-//        if (prod.getTalla().isEmpty()) throw new BadRequestException("Complete el campo TALLA"   );
-//        newProd.setTalla(prod.getTalla());
-//
-//        if(prod.getPrecio()== 0)  throw new BadRequestException("Complete el campo PRECIO"   );
-//        newProd.setPrecio(prod.getPrecio());
-//        if (prod.getModelo().getId().equals(0))   throw new BadRequestException("Seleccione un MODELO"  );
-//        newProd.setModelo(prod.getModelo());
-//        if (prod.getTipoProducto().getId().equals(0))throw new BadRequestException("Seleccione un Tipo de Producto"  );
-//        newProd.setTipoProducto(prod.getTipoProducto());
-//
-//
-//            return productoRepository.save(newProd);
-//
-//    }
+    public Producto Guardar(Producto prod){
 
-//    public Producto Actulaizar(Producto prod) {
-//// Creo q aun flata completar el codigo de (TIPO - MODELO)
-//          Producto newProd =  productoRepository.findById(prod.getId()).orElse(null);
-//
-//          newProd.setColor(prod.getColor());
-//          newProd.setMarca(prod.getMarca());
-//          newProd.setPrecio(prod.getPrecio());
-//          newProd.setTalla(prod.getTalla());
-//
-//
-//
-//        return productoRepository.save(newProd);
-//    }
+
+        return productoRepository.save(prod);
+
+    }
+
+    public Producto Actualizar(Integer stock , Long id) {
+// Creo q aun flata completar el codigo de (TIPO - MODELO)
+          Producto newProd =  productoRepository.findById(id).orElse(null);
+
+          newProd.setStock(stock);
+
+        return productoRepository.save(newProd);
+    }
 
 
 

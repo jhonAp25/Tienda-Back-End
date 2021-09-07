@@ -31,7 +31,11 @@ public class DetallePedidoController {
     public DetallePedido saveDetallePedido(@RequestBody DetallePedido detallePedido){
         return services.saveDetallePedido(detallePedido);
     }
-
+//    findByPedidoFecha
+    @GetMapping("/listaPorFechaPedido")
+    public List<DetallePedido> listadoPorFechaPedido(){
+    return services.findByPedidoFecha();
+}
 
 
 }

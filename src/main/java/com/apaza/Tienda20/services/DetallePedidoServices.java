@@ -6,6 +6,7 @@ import com.apaza.Tienda20.repository.DetallePedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -24,5 +25,9 @@ public class DetallePedidoServices {
 
     public DetallePedido saveDetallePedido(DetallePedido detallePedido){
         return repository.save(detallePedido);
+    }
+
+    public List<DetallePedido> findByPedidoFecha(){
+        return repository.findAllByPedidoFecha(LocalDate.now());
     }
 }

@@ -23,7 +23,6 @@ public class PedidoController {
         return services.listado();
     }
 
-
     @GetMapping("/listaId/{id}")
     public Pedido listadoPorId(@PathVariable Long id){
         return services.findByID(id);
@@ -33,5 +32,16 @@ public class PedidoController {
     public Pedido savePedido(@RequestBody Pedido pedido){
         return services.savePedido(pedido);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public void  deletePedid(@PathVariable Long id){
+        services.deletePedido(id);
+    }
+
+    @GetMapping("/listaNow")
+    public List<Pedido> listaHoy(){
+        return services.pedidoNow();
+    }
+
 
 }

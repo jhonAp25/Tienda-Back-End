@@ -6,6 +6,7 @@ import com.apaza.Tienda20.repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -24,6 +25,14 @@ public class PedidoServices {
 
     public Pedido savePedido(Pedido pedido) {
         return repository.save(pedido);
+    }
+
+    public void  deletePedido(Long id) {
+        repository.deleteById(id);
+    }
+
+    public List<Pedido> pedidoNow(){
+        return repository.findByFecha(LocalDate.now());
     }
 
 

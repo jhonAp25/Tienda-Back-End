@@ -13,9 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
+
 import java.util.List;
 
 @RestController
@@ -83,7 +81,7 @@ public class ProductoController {
 
     //
 //    @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Producto updateProdudto (Integer stock , Long id){
         return productoServices.Actualizar(stock, id);
     }

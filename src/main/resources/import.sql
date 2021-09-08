@@ -1,12 +1,12 @@
 insert into tienda values(null, 'Tienda01');
 insert into tienda values(null, 'Tienda02');
 
-insert into color values(null, '#B03A2E', 'rojo');
-insert into color values(null, '#1F618D', 'verde jade');
-insert into color values(null, '#1ABC9C', 'azul');
-insert into color values(null, '#273746', 'negro');
-insert into color values(null, '#7F8C8D', 'plomo plata');
-insert into color values(null, '#F4D03F', 'plomo rata');
+insert into color values(null, '#F03434', 'rojo');
+insert into color values(null, '#17A589', 'verde jade');
+insert into color values(null, '#0D1035', 'azul');
+insert into color values(null, '#141414', 'negro');
+insert into color values(null, '#8F8F8F', 'plomo plata');
+insert into color values(null, '#3B3C3C', 'plomo rata');
 
 insert into talla values (null, 'S');
 insert into talla values (null, 'M');

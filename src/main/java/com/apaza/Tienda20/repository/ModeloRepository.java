@@ -13,6 +13,6 @@ public interface ModeloRepository extends JpaRepository<Modelo , Long> {
 //    @Query("select m from Modelo m inner join TipoProducto  tp on m.tipoProducto.id = tp.id where tp.id = ?1")
 //    List<Modelo> listaModeloID (Long id);
 //
-//    List<Modelo> getModeloById (Long id);
+
 }
 

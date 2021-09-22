@@ -26,8 +26,8 @@ public class TipoProductoController {
         return tipoProductoServices.guardar(tipo);
     }
 
-//    @GetMapping("/listaId/{id}")
-//    public List<TipoProducto> listadoId(@PathVariable long id){
-//        return tipoProductoServices.listarId(id);
-//    }
+    @GetMapping("/listaId/{id}")
+    public TipoProducto listadoId(@PathVariable Long id){
+        return tipoProductoServices.listarId(id);
+    }
 }

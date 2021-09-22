@@ -1,16 +1,16 @@
 package com.apaza.Tienda20.controller;
 
+import com.apaza.Tienda20.entity.Modelo;
+import com.apaza.Tienda20.services.ModeloServices;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-        import com.apaza.Tienda20.entity.Modelo;
-        import com.apaza.Tienda20.services.ModeloServices;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
-        import java.util.List;
 
-@RestController
 @RequestMapping("/modelo")
 @CrossOrigin(origins = "*")
+@RestController
 public class ModeloController {
     @Autowired
     ModeloServices modeloServices;

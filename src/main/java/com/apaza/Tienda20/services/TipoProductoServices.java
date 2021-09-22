@@ -21,9 +21,9 @@ public class TipoProductoServices {
         return tipoProductoRepository.findAll();
     }
 //
-//    public  List<TipoProducto> listarId(Long id){
-//        return tipoProductoRepository.getTipoProductoById(id);
-//    }
+    public  TipoProducto listarId(Long id){
+        return tipoProductoRepository.findById(id).orElse(null);
+    }
 
     public TipoProducto guardar(TipoProducto tipoProducto){
         return tipoProductoRepository.save(tipoProducto);

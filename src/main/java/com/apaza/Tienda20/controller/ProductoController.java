@@ -82,7 +82,7 @@ public class ProductoController {
     //
 //    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update")
-    public Producto updateProdudto (Integer stock , Long id){
+    public Producto updateStock (Integer stock , Long id){
         return productoServices.Actualizar(stock, id);
     }
 

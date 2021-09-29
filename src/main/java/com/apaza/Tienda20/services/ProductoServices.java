@@ -4,6 +4,7 @@ package com.apaza.Tienda20.services;
 import com.apaza.Tienda20.entity.Producto;
 import com.apaza.Tienda20.entity.TipoProducto;
 import com.apaza.Tienda20.repository.ProductoRepository;
+import com.apaza.Tienda20.util.MapperUtil;
 import com.apaza.Tienda20.util.exception.BadRequestException;
 import com.apaza.Tienda20.util.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,10 @@ public class ProductoServices {
 
 
 
-    public List<Producto>Listado(){
+    public List<?>Listado(){
         List<Producto> producto = productoRepository.findAll();
         if(producto.isEmpty()) throw new NotFoundException("No hay Productos aun....");
-        return producto;
+        return MapperUtil.Productos(producto);
     }
 //    public List<Producto>ListadoFecha(Date fecha){
 //        List<Producto> producto = productoRepository.findByFechaC(fecha);

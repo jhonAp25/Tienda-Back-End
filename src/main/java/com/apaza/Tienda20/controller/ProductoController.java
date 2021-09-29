@@ -49,9 +49,8 @@ public class ProductoController {
     }
 
     @GetMapping("/ListaModelo/{id}")
-    public ResponseEntity<?> ListaPorModelo (@PathVariable Long id){
-
-        return new ResponseEntity<>(productoServices.FiltroModelo(id), HttpStatus.OK);
+    public List<Producto> ListaPorModelo (@PathVariable Long id){
+        return   productoServices.FiltroModelo(id);
     }
 
     @GetMapping("/ModeloCustom/{idMol}/{idTal}/{idCol}")

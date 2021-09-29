@@ -34,10 +34,10 @@ public class ProductoServices {
 
     }
 
-    public List<?> FiltroModelo(Long id){
-         List<Producto> producto = productoRepository.findAllByModeloId(id);
-        if(producto.isEmpty()) throw new NotFoundException("No existe el producto con ID " + id);
-        return MapperUtil.Productos(producto);
+    public List<Producto> FiltroModelo(Long id){
+      //  List<Producto> producto =
+       // if(producto.isEmpty()) throw new NotFoundException("No existe el producto con ID " + id);
+        return productoRepository.findAllByModeloId(id);
 
     }
 

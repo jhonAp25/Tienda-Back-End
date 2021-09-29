@@ -48,6 +48,13 @@ public class ProductoController {
 
     }
 
+    @GetMapping("/listaIdDto/{id}")
+    public List<?> ListaIdDto(@PathVariable Long id){
+        return productoServices.FiltroModeloDto(id);
+
+    }
+
+
     @GetMapping("/ListaModelo/{id}")
     public List<Producto> ListaPorModelo (@PathVariable Long id){
         return   productoServices.FiltroModelo(id);

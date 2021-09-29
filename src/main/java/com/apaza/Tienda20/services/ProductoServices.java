@@ -41,6 +41,13 @@ public class ProductoServices {
 
     }
 
+    public List<?> FiltroModeloDto(Long id){
+          List<Producto> producto =productoRepository.findAllByModeloId(id);
+         if(producto.isEmpty()) throw new NotFoundException("No existe el producto con ID " + id);
+        return MapperUtil.Productos(producto);
+
+    }
+
     public List<Producto> filtroModeloColorTalla(Long idMod, Long idTal, Long idCol){
         return  productoRepository.findAllByModeloIdAndTallaIdAndColorId(idMod, idTal,idCol);
     }

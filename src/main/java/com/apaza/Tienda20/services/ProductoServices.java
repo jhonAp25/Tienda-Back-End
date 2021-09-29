@@ -25,11 +25,7 @@ public class ProductoServices {
         if(producto.isEmpty()) throw new NotFoundException("No hay Productos aun....");
         return MapperUtil.Productos(producto);
     }
-//    public List<Producto>ListadoFecha(Date fecha){
-//        List<Producto> producto = productoRepository.findByFechaC(fecha);
-//        if(producto.isEmpty()) throw new NotFoundException("No hay Productos aun....");
-//        return producto;
-//    }
+
 
     public Producto ListarId(Long id){
          Producto producto=  productoRepository.findById(id).orElse(null);
@@ -38,8 +34,11 @@ public class ProductoServices {
 
     }
 
-    public List<Producto> FiltroModelo(Long id){
-        return  productoRepository.findAllByModeloId(id);
+    public List<?> FiltroModelo(Long id){
+         List<Producto> producto = productoRepository.findAllByModeloId(id);
+        if(producto.isEmpty()) throw new NotFoundException("No existe el producto con ID " + id);
+        return MapperUtil.Productos(producto);
+
     }
 
     public List<Producto> filtroModeloColorTalla(Long idMod, Long idTal, Long idCol){

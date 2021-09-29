@@ -19,6 +19,10 @@ public class DetallePedidoServices {
         return repository.findAll();
     }
 
+    public DetallePedido listaId(Long id){
+        return repository.findById(id).orElse(null);
+    }
+
     public List<DetallePedido> findByIDPedido(Long id){
         return repository.findByPedidoId(id);
     }

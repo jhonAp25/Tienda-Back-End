@@ -22,6 +22,12 @@ public class DetallePedidoController {
         return services.listado();
     }
 
+    @GetMapping("/lista/{id}")
+    public DetallePedido ListaId(@PathVariable Long id){
+        return services.listaId(id);
+    }
+
+
     @GetMapping("/listaPorPedido/{id}")
     public List<DetallePedido> listadoPorPedido(@PathVariable Long id){
         return services.findByIDPedido(id);

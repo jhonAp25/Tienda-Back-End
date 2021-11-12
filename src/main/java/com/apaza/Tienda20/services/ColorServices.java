@@ -17,6 +17,7 @@ public class ColorServices {
 
 
     public List<Color> lista(){
+
         return repository.findAll();
     }
 

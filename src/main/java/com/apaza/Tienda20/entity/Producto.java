@@ -4,6 +4,7 @@ package com.apaza.Tienda20.entity;
 
         import javax.persistence.*;
         import java.time.LocalDate;
+        import java.util.List;
 
 
 @Entity
@@ -38,6 +39,7 @@ public class Producto {
 
     @ManyToOne
     private Modelo modelo;
+
 
 
 

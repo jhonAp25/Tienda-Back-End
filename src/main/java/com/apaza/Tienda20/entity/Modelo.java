@@ -17,14 +17,4 @@ public class Modelo {
     private String nombre;
     private String imagenProducto;
 
-
-
-
-
-
-
-
-
-
-
 }

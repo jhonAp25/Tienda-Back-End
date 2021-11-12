@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ProductoRepository extends JpaRepository<Producto , Long> {
 
+
     List<Producto> findAllByModeloId(Long id);
     List<Producto> findAllByModeloIdAndColorId(Long idMod, Long idCol);
     List<Producto> findAllByModeloIdAndTallaId(Long idMod, Long idTal);

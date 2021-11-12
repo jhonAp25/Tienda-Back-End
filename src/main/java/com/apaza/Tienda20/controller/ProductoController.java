@@ -27,19 +27,11 @@ public class ProductoController {
 
     @GetMapping("/lista")
     public ResponseEntity<?> listar(){
-//        Collection<Producto> itemsProducto= productoServices.Listado();
-//        Collection<ProductoDTO> itemsProductoDTO = ProductoMapper.convert(itemsProducto);
 
         return new ResponseEntity<>(productoServices.Listado(), HttpStatus.OK);
     }
 
-//    @GetMapping("/estadistica")
-//    public ResponseEntity<?>listarEstadistica(){
-//        Collection<Producto> itemsProducto = productoServices.Listado();
-//        Collection<EstadisticaDTO> itemsEstadisticaDTO = EstadisticaMapper.convert(itemsProducto);
-//
-//        return new ResponseEntity<>(itemsEstadisticaDTO,HttpStatus.OK);
-//    }
+
 
 
     @GetMapping("/listaId/{id}")

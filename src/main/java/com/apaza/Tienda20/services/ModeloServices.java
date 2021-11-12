@@ -25,7 +25,7 @@ public class ModeloServices {
 //        return modeloRepository.listaModeloID(id);
 //    }
 
-//    public List<Modelo>modeloID(Long id){
-//        return modeloRepository.getModeloById(id);
-//    }
+    public Modelo listarId(Long id){
+        return modeloRepository.findById(id).orElse(null);
+    }
 }

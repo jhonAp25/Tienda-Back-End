@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,6 +17,10 @@ public class TipoProductoServices {
 
     @Autowired
     TipoProductoRepository tipoProductoRepository;
+
+    public Boolean findTipo(Long id){
+        return tipoProductoRepository.existsById(id);
+    }
 
     public List<TipoProducto> listar(){
         return tipoProductoRepository.findAll();
@@ -29,4 +34,18 @@ public class TipoProductoServices {
         return tipoProductoRepository.save(tipoProducto);
     }
 
+    public TipoProducto updateDetalle(Long id, TipoProducto tipoProducto){
+
+
+            TipoProducto newTipo = listarId(id);
+
+
+            newTipo.setNombre(tipoProducto.getNombre());
+            newTipo.setModelo(tipoProducto.getModelo());
+            return tipoProductoRepository.save(newTipo);
+
+
+
+
+    }
 }

@@ -11,8 +11,6 @@ public class EstadisticaMapper {
         for (Producto prod : itemsProducto){
             EstadisticaDTO mapper = new EstadisticaDTO();
             mapper.setEstadisticaId(prod.getId());
-//            mapper.setProducto(prod.getTipoProducto().());
-           // mapper.setFecha(prod.getFechaC());
 
             collection.add(mapper);
 

@@ -62,14 +62,14 @@ insert into gastos values (null, 50.5 , '2021-08-20' , 'tela win' );
 insert into gastos values (null, 50.5 , '2021-08-20' , 'elastico' );
 
 
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 1, 1, 1 , 1) ;
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 2, 1, 1 , 1) ;
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 3, 1, 1 , 1) ;
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 2, 1, 2 , 1) ;
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,30, 1, 1, 3 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,30, 1, 1, 1 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,30, 2, 1, 1 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,30, 3, 1, 1 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,30, 2, 1, 2 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,30, 1, 1, 3 , 1) ;
 
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,15, 3, 2, 1 , 1) ;
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,15, 2, 2, 1 , 1) ;
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,15, 4, 2, 1 , 1) ;
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,15, 5, 2, 2 , 1) ;
-insert into producto values(null, true ,'2021-05-07', 55.5, 50.0,15, 6, 2, 3 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,15, 3, 2, 1 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,15, 2, 2, 1 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,15, 4, 2, 1 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,15, 5, 2, 2 , 1) ;
+insert into producto values(null, true ,'2021-05-07', 55.5,15, 6, 2, 3 , 1) ;

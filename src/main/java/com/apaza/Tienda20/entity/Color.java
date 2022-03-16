@@ -1,13 +1,16 @@
 package com.apaza.Tienda20.entity;
 
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
 
 @Entity
-@Data
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Color {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -36,15 +36,10 @@ public class TipoProductoServices {
 
     public TipoProducto updateDetalle(Long id, TipoProducto tipoProducto){
 
-
             TipoProducto newTipo = listarId(id);
-
-
             newTipo.setNombre(tipoProducto.getNombre());
             newTipo.setModelo(tipoProducto.getModelo());
             return tipoProductoRepository.save(newTipo);
-
-
 
 
     }

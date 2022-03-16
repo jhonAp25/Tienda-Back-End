@@ -13,5 +13,4 @@ public interface ProductoRepository extends JpaRepository<Producto , Long> {
     List<Producto> findAllByModeloIdAndTallaId(Long idMod, Long idTal);
     List<Producto> findAllByModeloIdAndTallaIdAndColorId(Long idMod, Long idTal, Long idCol);
 
-
 }

@@ -22,8 +22,7 @@ public class Producto {
 
     private LocalDate fechaIngreso;
 
-    private double precioMax;
-    private double precioMin;
+    private double precio;
     private int stock;
     private boolean estado;
 
@@ -39,6 +38,7 @@ public class Producto {
 
     @ManyToOne
     private Modelo modelo;
+
 
 
 

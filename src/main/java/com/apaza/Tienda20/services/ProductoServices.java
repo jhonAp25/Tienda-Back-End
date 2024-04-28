@@ -7,6 +7,7 @@ import com.apaza.Tienda20.repository.ProductoRepository;
 import com.apaza.Tienda20.util.MapperUtil;
 import com.apaza.Tienda20.util.exception.BadRequestException;
 import com.apaza.Tienda20.util.exception.NotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
@@ -14,9 +15,10 @@ import java.util.Date;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class ProductoServices {
-    @Autowired
-    ProductoRepository productoRepository;
+
+    private final ProductoRepository productoRepository;
 
 
 

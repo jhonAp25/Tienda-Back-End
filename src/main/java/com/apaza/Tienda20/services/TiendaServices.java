@@ -2,16 +2,18 @@ package com.apaza.Tienda20.services;
 
 import com.apaza.Tienda20.entity.Tienda;
 import com.apaza.Tienda20.repository.TiendaRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class TiendaServices {
 
-    @Autowired
-    private TiendaRepository repository;
+
+    private final  TiendaRepository repository;
 
     public List<Tienda> listado(){
         return repository.findAll();

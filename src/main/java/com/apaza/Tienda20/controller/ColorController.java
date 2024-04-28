@@ -2,7 +2,9 @@ package com.apaza.Tienda20.controller;
 
 import com.apaza.Tienda20.entity.Color;
 import com.apaza.Tienda20.services.ColorServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,11 +12,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/color")
-@CrossOrigin(origins = "*")
+@Validated
+@RequiredArgsConstructor
 public class ColorController{
 
-    @Autowired
-    ColorServices services;
+
+    private final  ColorServices services;
 
 
     @GetMapping

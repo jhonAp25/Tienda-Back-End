@@ -4,18 +4,21 @@ package com.apaza.Tienda20.controller;
 import com.apaza.Tienda20.entity.DetallePedido;
 import com.apaza.Tienda20.entity.Gastos;
 import com.apaza.Tienda20.services.DetallePedidoServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/detallePedido")
-@CrossOrigin(origins = "*")
+@Validated
+@RequiredArgsConstructor
 public class DetallePedidoController {
 
-    @Autowired
-    DetallePedidoServices services;
+
+    private final DetallePedidoServices services;
 
     @GetMapping("/lista")
     public List<DetallePedido> listado(){

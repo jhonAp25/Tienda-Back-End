@@ -3,18 +3,22 @@ package com.apaza.Tienda20.controller;
 import com.apaza.Tienda20.entity.Gastos;
 import com.apaza.Tienda20.entity.Modelo;
 import com.apaza.Tienda20.services.GastoServices;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/gastos")
-@CrossOrigin(origins = "*")
+@Validated
+@RequiredArgsConstructor
 public class GastosController {
-    @Autowired
-    GastoServices services;
+
+    private final GastoServices services;
 
     @GetMapping("/lista")
     public List<Gastos> listado(){
@@ -27,7 +31,7 @@ public class GastosController {
     }
 
     @PostMapping
-    public Gastos saveGastos(@RequestBody Gastos gastos){
-        return services.saveGasto(gastos);
+    public Gastos saveGastos(@RequestBody Gastos gasto){
+        return services.saveGasto(gasto);
     }
 }

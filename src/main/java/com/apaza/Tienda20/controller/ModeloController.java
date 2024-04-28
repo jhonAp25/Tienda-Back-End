@@ -2,6 +2,7 @@ package com.apaza.Tienda20.controller;
 
 import com.apaza.Tienda20.entity.Modelo;
 import com.apaza.Tienda20.services.ModeloServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,11 +10,11 @@ import java.util.List;
 
 
 @RequestMapping("/modelo")
-@CrossOrigin(origins = "*")
+@RequiredArgsConstructor
 @RestController
 public class ModeloController {
-    @Autowired
-    ModeloServices modeloServices;
+
+    private final ModeloServices modeloServices;
 
     @GetMapping("/lista")
     public List<Modelo> listado(){

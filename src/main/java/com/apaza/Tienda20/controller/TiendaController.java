@@ -1,8 +1,9 @@
 package com.apaza.Tienda20.controller;
 
-import com.apaza.Tienda20.entity.Producto;
+
 import com.apaza.Tienda20.entity.Tienda;
 import com.apaza.Tienda20.services.TiendaServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/tienda")
-@CrossOrigin(origins = "*")
+@RequiredArgsConstructor
 public class TiendaController {
 
-    @Autowired
-    private TiendaServices services;
+
+    private final  TiendaServices services;
 
     @GetMapping("/lista")
     public ResponseEntity<?> listar(){

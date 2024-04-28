@@ -3,6 +3,7 @@ package com.apaza.Tienda20.controller;
 import com.apaza.Tienda20.entity.Producto;
 import com.apaza.Tienda20.entity.TipoProducto;
 import com.apaza.Tienda20.services.TipoProductoServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +14,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/tipoProducto")
-@CrossOrigin(origins = "*")
+@RequiredArgsConstructor
 public class TipoProductoController {
-    @Autowired
-    TipoProductoServices tipoProductoServices;
+
+    private final TipoProductoServices tipoProductoServices;
 
     @GetMapping("/lista")
     public List<TipoProducto> listado(){

@@ -3,6 +3,7 @@ package com.apaza.Tienda20.services;
 import com.apaza.Tienda20.entity.Modelo;
 import com.apaza.Tienda20.entity.TipoProducto;
 import com.apaza.Tienda20.repository.TipoProductoRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,12 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@Transactional
+@RequiredArgsConstructor
 public class TipoProductoServices {
 
 
-    @Autowired
-    TipoProductoRepository tipoProductoRepository;
+
+    private final TipoProductoRepository tipoProductoRepository;
 
     public Boolean findTipo(Long id){
         return tipoProductoRepository.existsById(id);

@@ -3,6 +3,7 @@ package com.apaza.Tienda20.services;
 import com.apaza.Tienda20.entity.Color;
 import com.apaza.Tienda20.entity.Producto;
 import com.apaza.Tienda20.repository.ColorRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +11,11 @@ import java.util.List;
 
 
 @Service
+@RequiredArgsConstructor
 public class ColorServices {
 
-    @Autowired
-    ColorRepository repository;
+
+    private final ColorRepository repository;
 
 
     public List<Color> lista(){
@@ -32,6 +34,7 @@ public class ColorServices {
     public Color updateColor(Color color){
         Color newColor =  repository.findById(color.getId()).orElse(null);
 
+        assert newColor != null;
         return repository.save(newColor);
     }
 }

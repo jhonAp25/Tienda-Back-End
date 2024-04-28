@@ -1,29 +1,25 @@
 package com.apaza.Tienda20.controller;
 
-
 import com.apaza.Tienda20.entity.Modelo;
-import com.apaza.Tienda20.entity.Producto;
 import com.apaza.Tienda20.entity.TipoProducto;
 import com.apaza.Tienda20.services.ModeloServices;
 import com.apaza.Tienda20.services.TipoProductoServices;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
 @RequestMapping("/TipoModelo")
-@CrossOrigin(origins = "*")
+@RequiredArgsConstructor
 public class TipoModelo {
 
-    @Autowired
-    private TipoProductoServices tipoProductoServices;
 
-    @Autowired
-    private ModeloServices modeloServices;
+    private final  TipoProductoServices tipoProductoServices;
+
+
+    private final ModeloServices modeloServices;
 
 
 

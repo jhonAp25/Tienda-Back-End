@@ -3,6 +3,7 @@ package com.apaza.Tienda20.services;
 
 import com.apaza.Tienda20.entity.DetallePedido;
 import com.apaza.Tienda20.repository.DetallePedidoRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +11,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class DetallePedidoServices {
 
-    @Autowired
-    DetallePedidoRepository repository;
+
+    private final DetallePedidoRepository repository;
 
     public List<DetallePedido> listado(){
         return repository.findAll();

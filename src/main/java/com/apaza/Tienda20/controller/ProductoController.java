@@ -7,6 +7,7 @@ import com.apaza.Tienda20.mapper.EstadisticaMapper;
 import com.apaza.Tienda20.mapper.ProductoMapper;
 import com.apaza.Tienda20.mapper.ProductoDTO;
 import com.apaza.Tienda20.services.ProductoServices;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,10 +19,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/producto")
-@CrossOrigin(origins = "*")
+@RequiredArgsConstructor
 public class ProductoController {
-    @Autowired
-    ProductoServices productoServices;
+
+    private final  ProductoServices productoServices;
 
 
 

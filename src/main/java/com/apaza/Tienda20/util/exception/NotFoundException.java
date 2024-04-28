@@ -1,7 +1,7 @@
 package com.apaza.Tienda20.util.exception;
 
 
-import org.springframework.data.relational.core.sql.Not;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

@@ -1,10 +1,9 @@
 package com.apaza.Tienda20.entity;
 
-        import lombok.Data;
+import lombok.Data;
 
-        import javax.persistence.*;
-        import java.time.LocalDate;
-        import java.util.List;
+import javax.persistence.*;
+import java.time.LocalDate;
 
 
 @Entity
